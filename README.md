@@ -33,3 +33,20 @@
 - In the command line, run the below commands:
   - $ yarn install
   - $ yarn start
+
+### TASKS
+
+- Front End (React App)
+  - User Auth
+    - Login
+    - Registration
+  - Shopping Page
+  - Cart Page
+  - Checkout
+
+- Back End
+  - Express Router
+  - Sequelize ORM  
+  - Inventory
+    - MySQL Database
+    - User Auth Database
