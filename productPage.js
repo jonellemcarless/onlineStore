@@ -19,6 +19,8 @@ mongoose.connect('mongodb://localhost:27017/onlineStore', {useNewUrlParser: true
 
 app.get("/productModel"),
 app.post("/public/productPage.html", function(request, response) {
-    Products.create(request.body).then(function(productPage))
+    Products.create(request.body).then(function(productPage)) {
+        return("Hello");
+    }
 }
 );

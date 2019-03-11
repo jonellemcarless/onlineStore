@@ -9,7 +9,7 @@ var PORT = 3000;
 
 // Requiring the `User` model for accessing the `users` collection
 var User = require("./userModel.js");
-var Products = require("./productModel.js");
+// var Products = require("./productModel.js");
 
 // Initialize Express
 var app = express();
