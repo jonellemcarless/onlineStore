@@ -1,88 +1,120 @@
-var express = require("express");
-var mongojs = require("mongojs");
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
-var logger = require("morgan");
-var mongoose = require("mongoose");
-// var sequelize = require("sequelize")
-
-var PORT = 3000;
-
-// Requiring the `User` model for accessing the `users` collection
-var User = require("./userModel.js");
-// var Products = require("./productModel.js");
 
 // Initialize Express
-var app = express();
+const app = express();
+
+// Bodyparser middleware
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
+app.use(bodyParser.json());
+
+// DB Config
+const db = require("./client/src/config/keys").mongoURI;
+
+// Connect to Mongo DB
+mongoose.connect(db, { useNewUrlParser: true }
+  )
+  .then(() => console.log("MongoDB successfully connected."))
+  .catch(err => console.log(err));
+
+// process.env.port is Heroku's port if you choose to deploy the app there
+const PORT = process.env.PORT || 5000; 
+
+app.listen(PORT, () => console.log(`Server up and running on port ${PORT} !`));
+
+
+
+
+// const PORT = 2000;  
+// const mongojs = require("mongojs");
+
+// const logger = require("morgan");
+
+// var sequelize = require("sequelize")
+
+// Requiring the `User` model for accessing the `users` collection
+// var User = require("./userModel.js");
+// var Products = require("./productModel.js");
 
 // Configure middleware
 
 // Use morgan logger for logging requests
-app.use(logger("dev"));
+// app.use(logger("dev"));
 // Parse request body as JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
 // Make public a static folder
-app.use(express.static("public"));
+// app.use(express.static("public"));
+
+
+
+
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/onlineStore", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/onlineStore", { useNewUrlParser: true });
 
-// Database configuration
-// Save the URL of our database as well as the name of our collection
-var databaseUrl = "onlineStore";
-var collections = ["Products"];
+// // Database configuration
+// // Save the URL of our database as well as the name of our collection
+// var databaseUrl = "onlineStore";
+// var collections = ["Products"];
 
-// Use mongojs to hook the database to the db variable
-var db = mongojs(databaseUrl, collections);
+// // Use mongojs to hook the database to the db variable
+// var db = mongojs(databaseUrl, collections);
 
-// This makes sure that any errors are logged if mongodb runs into an issue
-db.on("error", function(error) {
-  console.log("Database Error:", error);
-});
-
-// Routes
-// 1. At the root path, send a simple hello world message to the browser
-app.get("/", function(req, res) {
-  res.send("Home Page");
-});
-
-// 2. Route for login page
-// app.get("/login", function(req, res) {
-//   res.send("Login Page");
+// // This makes sure that any errors are logged if mongodb runs into an issue
+// db.on("error", function(error) {
+//   console.log("Database Error:", error);
 // });
 
+// // Routes
+// // 1. At the root path, send a simple hello world message to the browser
+// app.get("/", function(req, res) {
+//   res.send("Home Page");
+// });
 
-// Routes
+// // 2. Route for login page
+// // app.get("/login", function(req, res) {
+// //   res.send("Login Page");
+// // });
 
-// Route to post our form submission to mongoDB via mongoose
-app.post("/", function(req, res) {
-  // Create a new user using req.body
-  User.create(req.body)
-    .then(function(dbUser) {
-      // If saved successfully, send the the new User document to the client
-      res.json(dbUser);
-    })
-    .catch(function(err) {
-      // If an error occurs, send the error to the client
-      res.json(err);
-    });
-});
 
-// Route to post our form submission to mongoDB via mongoose
-app.post("/submit", function(req, res) {
-  // Create a new user using req.body
-  User.create(req.body)
-    .then(function(dbUser) {
-      // If saved successfully, send the the new User document to the client
-      res.json(dbUser);
-    })
-    .catch(function(err) {
-      // If an error occurs, send the error to the client
-      res.json(err);
-    });
-});
+// // Routes
 
-// Start the server
-app.listen(PORT, function() {
-  console.log("App running on port " + PORT + "!");
-});
+// // Route to post our form submission to mongoDB via mongoose
+// app.post("/", function(req, res) {
+//   // Create a new user using req.body
+//   User.create(req.body)
+//     .then(function(dbUser) {
+//       // If saved successfully, send the the new User document to the client
+//       res.json(dbUser);
+//     })
+//     .catch(function(err) {
+//       // If an error occurs, send the error to the client
+//       res.json(err);
+//     });
+// });
+
+// // Route to post our form submission to mongoDB via mongoose
+// app.post("/submit", function(req, res) {
+//   // Create a new user using req.body
+//   User.create(req.body)
+//     .then(function(dbUser) {
+//       // If saved successfully, send the the new User document to the client
+//       res.json(dbUser);
+//     })
+//     .catch(function(err) {
+//       // If an error occurs, send the error to the client
+//       res.json(err);
+//     });
+// });
+
+// // Start the server
+// app.listen(PORT, function() {
+//   console.log("App running on port " + PORT + "!");
+// });

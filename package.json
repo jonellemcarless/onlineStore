@@ -1,18 +1,39 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "onlinestore",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Requirements",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "server": "nodemon server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonellemcarless/onlineStore.git"
+  },
+  "author": "Jonelle Carless",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonellemcarless/onlineStore/issues"
+  },
+  "homepage": "https://github.com/jonellemcarless/onlineStore#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "mongoose": "^5.0.11",
-    "morgan": "^1.9.0"
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.0",
+    "mongodb": "^3.1.13",
+    "mongojs": "^2.6.0",
+    "mongoose": "^5.4.19",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "react": "^16.8.4",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
