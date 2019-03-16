@@ -7,7 +7,7 @@ class Landing extends Component {
           <div className="col s12 center-align">
             <h4>
               <b>Join</b> us today!{" "}
-              <span style={{ fontFamily: "monospace" }}>naturalBeauty</span> you can trust.
+              <span style={{ fontFamily: "Simplifica" }}>naturalBeauty</span> you can trust.
             </h4>
             <p className="flow-text grey-text text-darken-1">
             Join our exclusive VIP only beauty insider club for for exclusive access to our products curated by top dermotologists. 
