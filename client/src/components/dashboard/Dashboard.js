@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+
 import { logoutUser } from "../../actions/authActions";
+// import ProductPage from "./productpage"
+
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -12,6 +15,7 @@ render() {
 return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
+        {/* <ProductPage /> */}
           <div className="col s12 center-align">
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
@@ -34,7 +38,7 @@ return (
             </button>
           </div>
         </div>
-      </div>
+    </div>
     );
   }
 }
