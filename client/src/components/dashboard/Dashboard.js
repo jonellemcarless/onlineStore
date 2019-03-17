@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+// import ProductListing from "../../features/product-listing"
+// import data from "../../data/products.json"
 
 import { logoutUser } from "../../actions/authActions";
-// import ProductPage from "./productpage"
+// import { ProductPage }from "../dashboard/productpage"
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -15,8 +17,11 @@ render() {
 return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
+
         {/* <ProductPage /> */}
+
           <div className="col s12 center-align">
+          
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
@@ -39,7 +44,7 @@ return (
           </div>
         </div>
     </div>
-    );
+    )
   }
 }
 Dashboard.propTypes = {

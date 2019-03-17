@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.0.0",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "classnames": "^2.2.6",
+    "eslint": "^5.15.2",
+    "eslint-loader": "^2.1.2",
     "jwt-decode": "^2.2.0",
+    "mysql": "^2.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -16,7 +20,8 @@
     "react-scripts": "^2.1.8",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -7,7 +7,8 @@
       "description": "Natural Organic Super Fancy Face Soap",
       "keywords": ["skincare"],
       "image": "skincare.jpg",
-      "price": 30
+      "price": 30,
+      "quantity": 10
     },
 
     {
@@ -16,7 +17,8 @@
       "description": "Natural Organic Super Fancy Nude Lipstick",
       "keywords": ["makeup"],
       "image": "lip.jpg",
-      "price": 20
+      "price": 20,
+      "quantity": 10
     },
 
     {
@@ -25,7 +27,8 @@
       "description": "Natural Organic Super Fancy Pink Lipstick",
       "keywords": ["makeup"],
       "image": "lip.jpg",
-      "price": 20
+      "price": 20,
+      "quantity": 10
     },
 
     {
@@ -34,7 +37,8 @@
       "description": "Natural Organic Super Fancy Red Lipstick",
       "keywords": ["makeup"],
       "image": "lip.jpg",
-      "price": 20
+      "price": 20,
+      "quantity": 10
     },
 
     {
@@ -43,7 +47,8 @@
       "description": "Natural Organic Super Fancy Skin Serum",
       "keywords": ["skincare"],
       "image": "skincare.jpg",
-      "price": 40
+      "price": 40,
+      "quantity": 10
     },
 
     {
@@ -52,7 +57,8 @@
       "description": "Natural Organic Super Fancy Toner",
       "keywords": ["skincare"],
       "image": "toner.jpg",
-      "price": 20
+      "price": 20,
+      "quantity": 10
     },
     {
       "id": 7,
@@ -60,7 +66,8 @@
       "description": "Natural Organic Super Fancy Moisturizer for Dry Skin",
       "keywords": ["skincare"],
       "image": "moisturizer.jpg",
-      "price": 50
+      "price": 50,
+      "quantity": 10
     },
 
     {
@@ -69,7 +76,8 @@
       "description": "Natural Organic Super Fancy Mattifying Moisturizer for Oily Skin",
       "keywords": ["skincare"],
       "image": "moisturizer.jpg",
-      "price": 50
+      "price": 50,
+      "quantity": 10
     },
 
     {
@@ -78,7 +86,8 @@
       "description": "Natural Organic Super Fancy Moisturizer for Combination Skin",
       "keywords": ["skincare"],
       "image": "moisturizer.jpg",
-      "price": 50
+      "price": 50,
+      "quantity": 10
     },
 
     {
@@ -87,7 +96,8 @@
       "description": "Natural Organic Super Fancy Face Mask",
       "keywords": ["skincare"],
       "image": "skincare.jpg",
-      "price": 20
+      "price": 20,
+      "quantity": 10
     },
 
     {
@@ -96,7 +106,8 @@
       "description": "Natural Organic Super Fancy Mascara",
       "keywords": ["makeup"],
       "image": "mascara.jpg",
-      "price": 20
+      "price": 20,
+      "quantity": 10
     }
   ]
 }

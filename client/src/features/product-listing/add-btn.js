@@ -15,6 +15,9 @@ import React from "react"
 // export default AddBtn;
        
 export default function AddBtn(props) {
+  if (props.product.quantity !== 0) {
+
+  }
   return <button
   onClick = {() => props.addToCart(props.product)}
   >Add to Cart ({

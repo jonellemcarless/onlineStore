@@ -12,7 +12,7 @@ var ProductSchema = new Schema({
   itemid: {
     type: Number,
     trim: true,
-    required: "Product Name is Required"
+    required: "Item ID is Required"
   },
   // `password` must be of type String
   // `password` will trim leading and trailing whitespace before it's saved
