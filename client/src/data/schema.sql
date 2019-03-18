@@ -1,11 +1,12 @@
 -- SCHEMA
 
-CREATE DATABASE burgers_db;
-USE burgers_db;
+CREATE DATABASE store_db;
+USE store_db;
 
-CREATE TABLE burgers (
+CREATE TABLE products (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
-	devoured BOOLEAN DEFAULT false,
+	price int(10) NOT NULL,
+	quantity int(10) NOT NULL,
 	PRIMARY KEY (id)
 );

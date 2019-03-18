@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-// import ProductListing from "../../features/product-listing"
-// import data from "../../data/products.json"
+// import ProductListing from "./features/product-listing"
+// import data from "../data/products.json"
 
 import { logoutUser } from "../../actions/authActions";
-// import { ProductPage }from "../dashboard/productpage"
+// import { ProductPage }from "./pages/productpage"
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -16,12 +16,7 @@ render() {
     const { user } = this.props.auth;
 return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-
-        {/* <ProductPage /> */}
-
-          <div className="col s12 center-align">
-          
+          <div className="col s12 center-align">   
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
@@ -29,6 +24,8 @@ return (
                 <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
               </p>
             </h4>
+
+ <div className="row">
             <button
               style={{
                 width: "150px",
@@ -37,16 +34,17 @@ return (
                 marginTop: "1rem"
               }}
               onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              className="btn btn-large waves-effect waves-light hoverable light-green darken-4"
             >
               Logout
             </button>
           </div>
         </div>
     </div>
-    )
-  }
+  );
 }
+}
+
 Dashboard.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired

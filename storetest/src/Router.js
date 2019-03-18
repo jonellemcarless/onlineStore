@@ -7,7 +7,7 @@ import CartPage from "./pages/cartpage";
 
 const Router = () => (
   <Switch>
-    <Route exact path="/" component={HomePage} />
+    <Route exact path="/dashboard" component={HomePage} />
     <Route exact path="/products" component={ProductPage} />
     <Route exact path="/cart" component={CartPage} />
   </Switch>

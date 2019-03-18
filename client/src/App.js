@@ -14,6 +14,9 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import ProductPage from "./components/dashboard/pages/productpage";
+// import Router from "./Router"
+import CartPage from "./components/dashboard/pages/cartpage";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -40,6 +43,12 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
+      
+      {/* <div>
+      <Navbar /> 
+      <Router /> 
+      </div> */}
+      
       <Router>
         <div className="App">
           <Navbar />
@@ -48,10 +57,12 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
           <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute exact path="/products" component={ProductPage} />
+              <PrivateRoute exact path="/cart" component={CartPage} />
             </Switch>
         </div>
       </Router>
-      </Provider>
+     </Provider>
     );
   }
 }

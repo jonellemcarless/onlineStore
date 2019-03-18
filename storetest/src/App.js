@@ -6,13 +6,13 @@ import Router from "./Router";
 const Navigation = (props) => (
   <nav>
     <ul >
-      <li>
+      <li key="A">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
+      <li key="B">
         <NavLink to="/products">Products</NavLink>
       </li>
-      <li>
+      <li key="C">
         <NavLink to="/cart">Cart</NavLink>
       </li>
     </ul>
