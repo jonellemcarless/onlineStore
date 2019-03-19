@@ -19,6 +19,7 @@ export default function AddBtn(props) {
 
   }
   return <button
+  className="btn waves-effect waves-light hoverable light-green darken-4"
   onClick = {() => props.addToCart(props.product)}
   >Add to Cart ({
     (props.cartItem && props.cartItem.quantity) || 0

@@ -10,9 +10,10 @@ class Navbar extends Component {
             <Link
               to="/"
               style={{
-                fontFamily: "Simplifica"
+                fontFamily: "Simplifica",
+                fontweight: "bold"
               }}
-              className="col s5 brand-logo left-align black-text"
+              className="col s5 brand-logo right-align white-text"
             >
               <i className="material-icons">spa</i>
               naturalBeauty

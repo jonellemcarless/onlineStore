@@ -7,7 +7,7 @@ const sort = (item) => {
 
 
 function Cart(props) {
-  return <h1>Cart</h1>
+  return <p>Still in Progress...</p>
   
   //  <table>
   //   <thead>

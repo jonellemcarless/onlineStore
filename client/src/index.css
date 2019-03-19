@@ -3,6 +3,19 @@
 
 h3 { font-family: Delicious, sans-serif; } */
 
+.navbar-fixed {
+  font-family: "Segoe UI";
+  font-size: 30px;
+}
+
+h4 {
+  font-family: "Simplifica";
+}
+
+.product-list-item {
+  font-family: "Segoe UI";
+}
+
 body {
   margin: 0;
   padding: 0;

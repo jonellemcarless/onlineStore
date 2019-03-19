@@ -6,7 +6,7 @@ import { Provider } from "react-redux"
 import './index.css';
 import App from './App';
 import store from "./config/store";
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 
 const app = <Provider store={store}>
  <BrowserRouter>
@@ -17,4 +17,4 @@ const app = <Provider store={store}>
 const rootElement = document.getElementById("root")
 ReactDOM.render(app, rootElement);
 
-serviceWorker.unregister();
+// serviceWorker.unregister();

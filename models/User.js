@@ -1,3 +1,6 @@
+// Pull in our required dependencies
+// Create a Schema to represent a User, defining fields and types as objects of the Schema
+// Export the model so we can access it outside of this file
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 // Create Schema
