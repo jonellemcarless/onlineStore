@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "## Requirements",
   "main": "server.js",
+  "engines": { 
+    "node" : "11.10.0"
+  },
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
@@ -40,8 +43,5 @@
     "passport-jwt": "^4.0.0",
     "path": "^0.12.7",
     "validator": "^10.11.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.10"
   }
 }

@@ -1,9 +1,6 @@
 //import React from "react"
 
 import React, { Component } from "react"
-
-
-
  
 // class AddBtn extends Component {
 //   addToCartPlus = (props) => { 
