@@ -7,43 +7,47 @@ const sort = (item) => {
 
 
 function Cart(props) {
-  return <p>Still in Progress...</p>
-  
-  //  <table>
-  //   <thead>
-  //     <tr>
-  //       <th key="1">Item</th>
-  //       <th key="2">Quantity</th>
-  //       <th key="3"></th>
-  //       <th key="4"></th>
-  //     </tr>
-  //   </thead>
+  console.log(props);
+  // <p>Still in Progress...</p>
+  return( 
 
-  //   <tbody>
-  //     {
-  //       sort(props.cart).map(item => <tr>
-  //         <td key="1">{ item.name }</td>
-  //         <td key="2">{ item.quantity }</td>
-  //         <td key="3">
-  //           <button
-  //           onClick={(e) => props.addToCart(item)}
-  //           >+</button>
-  //         </td>
-  //         <td key="4">
-  //           <button
-  //           onClick={(e) => props.removeFromCart(item)}
-  //           >-</button>
-  //         </td>
-  //         <td key="5">
-  //           <button
-  //           onClick={(e) => props.removeAllFromCart(item)}
-  //           >Empty Cart</button>
-  //         </td>
-  //       </tr>)
-  //     }
-  //   </tbody>
-  // </table>
+   <table>
+    <thead>
+      <tr>
+        <th key="1">Item</th>
+        <th key="2">Quantity</th>
+        <th key="3"></th>
+        <th key="4"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {
+        sort(props.cart).map(item => <tr>
+          <td key="1">{ item.name }</td>
+          <td key="2">{ item.quantity }</td>
+          <td key="3">
+            <button
+            onClick={(e) => props.addToCart(item)}
+            >+</button>
+          </td>
+          <td key="4">
+            <button
+            onClick={(e) => props.removeFromCart(item)}
+            >-</button>
+          </td>
+          <td key="5">
+            <button
+            onClick={(e) => props.removeAllFromCart(item)}
+            >Empty Cart</button>
+          </td>
+        </tr>)
+      }
+    </tbody>
+  </table>
+  );
 }
+
 
 function mapStateToProps(state) {
   return {

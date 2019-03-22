@@ -5,6 +5,7 @@
 // Set the port for our server to run on and have our app listen on this port
 
 const express = require("express");
+const favicon = require('express-favicon');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
@@ -12,8 +13,22 @@ const path = require("path")
 
 const users = require("./routes/api/users");
 
+// process.env.port is Heroku's port
+const PORT = process.env.PORT || 5000; 
+
 // Initialize Express
 const app = express();
+
+app.use(favicon(__dirname + '/build/favicon.ico'));
+// the __dirname is the current directory from where the script is running
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/ping', function (req, res) {
+ return res.send('pong');
+});
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // Bodyparser middleware
 app.use(
@@ -49,6 +64,6 @@ if(process.env.NODE_ENV === "production") {
 }
 
 // process.env.port is Heroku's port
-const PORT = process.env.PORT || 5000; 
+// const PORT = process.env.PORT || 5000; 
 
 app.listen(PORT, () => console.log(`Server up and running on port ${PORT} !`));

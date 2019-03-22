@@ -3,7 +3,7 @@
 Express server
 
 
-## NPM packages used
+## NPM packages used :lock:
 
 - axios: Promise based HTTP client for the browser and node.js
 - babel: Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.
@@ -45,3 +45,10 @@ classnames: used for conditional classes in our JSX
 react-router-dom: used for routing purposes
 - redux: used to manage state between components (can be used with React or any other view library)
 - redux-thunk: middleware for Redux that allows us to directly access the dispatch method to make asynchronous calls from our actions
+
+## Issues :sos:
+
+- add to cart button
+- cart page
+- ui alignment
+- 
