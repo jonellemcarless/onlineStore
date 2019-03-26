@@ -16,11 +16,11 @@ export default function ProductListItem(props) {
         <div>{ props.product.description }</div>
         <div>${ props.product.price }</div>
         <div>
-            <AddBtn
+            {/* <AddBtn
             cartItem={props.cartItem}
             product={props.product}
             addToCart={props.addToCart}
-            />
+            /> */}
         {
             props.cartItem
             ? <RemoveBtn
@@ -33,10 +33,13 @@ export default function ProductListItem(props) {
             
         </div> 
         <div>
-            <button onClick={()=> props.addToCart(props.product) }>
-            Add To Cart ({
+            <button 
+            className="btn waves-effect waves-light hoverable light-green darken-4"
+            onClick={()=> props.addToCart(props.product) }>
+            Add To Cart </button>
+    {/* ({
                         thisItemInCart && thisItemInCart.quantity || 0
-    })</button>
+    }) */}
         </div>
 
     </div>
