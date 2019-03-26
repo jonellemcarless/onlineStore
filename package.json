@@ -2,9 +2,11 @@
   "name": "onlinestore",
   "version": "1.0.0",
   "description": "## Requirements",
-  "main": "server.js",
+  "private": true,
   "engines": { 
-    "node" : "11.10.0"
+    "node" : "11.10.0",
+    "npm": "6.7.0",
+    "yarn": "1.13.0"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -13,7 +15,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && yarn install && yarn run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "proxy": "http://localhost:5000",
   "repository": {
