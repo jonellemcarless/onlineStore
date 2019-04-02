@@ -9,10 +9,10 @@ class Navbar extends Component {
           <div className="nav-wrapper light-green darken-4">
             <Link
               to="/"
-              style={{
-                fontFamily: "Simplifica",
-                fontweight: "bold"
-              }}
+              // style={{
+              //   fontFamily: "Simplifica",
+              //   fontweight: "bold"
+              // }}
               className="col s5 brand-logo right-align white-text"
             >
               <i className="material-icons">spa</i>
@@ -36,4 +36,11 @@ class Navbar extends Component {
     );
   }
 }
+
+// class Navbar extends Component {
+//     render() {
+//       return (
+
+//       )}}
+
 export default Navbar;

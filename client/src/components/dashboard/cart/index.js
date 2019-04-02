@@ -1,16 +1,13 @@
 import React from "react"
 import { connect } from "react-redux"
-// import cartReducer from "./reducer"
+
 const sort = (item) => {
   return item.sort((a, b) => a.id < b.id)
 }
 
-
 function Cart(props) {
   console.log(props);
-  // <p>Still in Progress...</p>
-  return( 
-
+  return(
    <table>
     <thead>
       <tr>
@@ -48,7 +45,6 @@ function Cart(props) {
   );
 }
 
-
 function mapStateToProps(state) {
   return {
     cart: state.cart,
@@ -68,4 +64,5 @@ function mapDispatchToProps(dispatch) {
     }
   }
 }
+
 export default connect (mapStateToProps, mapDispatchToProps)(Cart)

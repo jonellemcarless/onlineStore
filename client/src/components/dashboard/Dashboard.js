@@ -16,7 +16,7 @@ render() {
     const { user } = this.props.auth;
 return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
-          <div className="col s12 center-align">   
+          <div className="jumbotron">   
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
