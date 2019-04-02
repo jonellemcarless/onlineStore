@@ -44,7 +44,7 @@ app.use("/api/users", users);
 
 // Serve static assets if in production
 if(process.env.NODE_ENV === "production") {
-  app.use('/static', express.static(path.join(__dirname, 'client/build')));
+  app.use('/static', express.static(path.join(__dirname, 'public')));
   // app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
